@@ -4,7 +4,7 @@ This extension is designed to provide a minimal and appealing visual reference t
 
 ## Features
 
-**Visual Indicators for Memory Usage*:
+*Visual Indicators for Memory Usage*:
 Simultaneously see total memory usage and browser memory usage, side by side.
 
 

@@ -8,7 +8,7 @@
       "service_worker": "service_worker.js",
         "type": "module"
     },
-    "permissions": ["system.memory", "tabs"],
+    "permissions": ["storage", "system.memory", "tabs"],
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["service_worker.js"],
@@ -31,5 +31,9 @@
         "side_panel": {
           "default_path": "sidepanel.html"
         }
+    },
+    "options_ui": {
+      "page": "options.html",
+      "open_in_tab": false
     }
 }
