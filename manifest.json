@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Oodles",
+    "description": "Manage your browser performance.",
+    "version": "0.0.1",
+    "homepage_url": "https://github.com/jesse-sealand/chrome-extension-oodles",
+    "background": {
+      "service_worker": "background.js",
+        "type": "module"
+    },
+    "permissions": ["system.memory", "tabs"],
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["background.js"],
+        "run_at": "document_end"
+    }],
+    "icons": {
+      "16": "icon-16.png",
+      "32": "icon-32.png",
+      "48": "icon-48.png",
+      "128": "icon-128.png"
+    },
+    "action": {
+        "default_icon": {
+          "16": "icon-16.png",
+          "32": "icon-32.png",
+          "48": "icon-48.png",
+          "128": "icon-128.png"
+        },
+        "default_popup": "popup.html"
+    }
+}
