@@ -1,10 +1,10 @@
-# Ooldes extension for Google Chrome
+# Oodles extension for Google Chrome
 
 This extension is designed to provide a minimal and appealing visual reference to system memory when browsing the web. Is your browser running slow, it may just be your browser.
 
 ## Features
 
-- **Visual Indicators for Memory Usage*:
+**Visual Indicators for Memory Usage*:
 Simultaneously see total memory usage and browser memory usage, side by side.
 
 
