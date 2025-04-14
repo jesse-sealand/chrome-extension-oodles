@@ -1,5 +1,4 @@
 /*  Variables  */
-
 let MemTotal = 0;
 let MemUsed = 0;
 let MemUsageSystem = 0;
@@ -12,7 +11,7 @@ let CpuTotal = 0;
 let CpuUsageSystem = 0;
 let CpuUsageBrowser = 0;
 
-let SIZE = 32;
+let SIZE = 128;
 
 
 /*  Imports  */
@@ -38,6 +37,9 @@ const intervalID = setInterval(myCallback, 500, "Parameter 1", "Parameter 2");
 function myCallback(a, b) {
     try {
         getMemoryData();
+
+        //console.log(MemTotal);
+        //console.log(MemUsed);
 
         let imageData = getImageData();
         let settingIcon = chrome.action.setIcon({
@@ -77,16 +79,14 @@ function getImageData() {
             labels: ['Red', 'Blue', 'Yellow'],
             datasets: [{
                 label: 'Votes',
-                data: [1, 1, 1],
+                data: [MemUsed, MemTotal - MemUsed],
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)'
+                    'rgba(54, 162, 235, 0.2)'
                 ],
                 borderColor: [
                     'rgba(255, 99, 132, 1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)'
+                    'rgba(54, 162, 235, 1)'
                 ],
                 borderWidth: 1
             }]
